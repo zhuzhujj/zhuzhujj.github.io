@@ -1239,7 +1239,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5ceefb;
+  background: #ab1758;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1409,34 +1409,6 @@ pre .javascript .function {
 }
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
-}
-.site-state {
-  display: flex;
-  justify-content: center;
-  line-height: 1.4;
-  margin-top: 10px;
-  overflow: hidden;
-  text-align: center;
-  white-space: nowrap;
-}
-.site-state-item {
-  padding: 0 15px;
-}
-.site-state-item:not(:first-child) {
-  border-left: 1px solid #eee;
-}
-.site-state-item a {
-  border-bottom: none;
-}
-.site-state-item-count {
-  display: block;
-  font-size: 1em;
-  font-weight: 600;
-  text-align: center;
-}
-.site-state-item-name {
-  color: #999;
-  font-size: 0.8125em;
 }
 .footer {
   color: #999;
@@ -2078,9 +2050,6 @@ pre .javascript .function {
 .footer-inner {
   color: #000;
 }
-.color-blue {
-  color: #00f;
-}
 .category-all-page .category-all-title {
   text-align: center;
 }
@@ -2689,9 +2658,6 @@ body {
 .posts-expand .post-meta-container {
   color: #800;
 }
-.sidebar {
-  opacity: 0.9;
-}
 .header-inner {
   background: rgba(255,255,255,0.9);
 }
@@ -2701,4 +2667,45 @@ body {
 .main-inner {
   background-color: rgba(255,255,255,0);
   padding: 0px 40px 40px 40px;
+}
+.site-state {
+  flex-direction: column;
+  margin-top: 0;
+  text-align: left;
+}
+.site-state .site-state-item {
+  margin: 0 0 10px;
+  border-left: none;
+}
+.site-state .site-state-item:not(:first-child) {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.site-state .site-state-item.site-state-categories .category-list {
+  font-size: 0.8125em;
+  padding-left: 0;
+  margin: 0;
+}
+.site-state .site-state-item.site-state-categories .category-list .category-list-item {
+  padding: 6px 0;
+}
+.site-state .site-state-item.site-state-categories .category-list .category-list-item .category-list-count {
+  color: #999;
+}
+.site-state .site-state-item.site-state-categories .category-list .category-list-item .category-list-count:before {
+  content: "(";
+}
+.site-state .site-state-item.site-state-categories .category-list .category-list-item .category-list-count:after {
+  content: ")";
+}
+.site-state .site-state-item .site-state-item-name {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+a {
+  margin-left: 20px;
+}
+.color-blue {
+  color: #4512f5;
 }
