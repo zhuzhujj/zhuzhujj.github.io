@@ -1239,7 +1239,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e9a3f0;
+  background: #7d95ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2077,6 +2077,9 @@ pre .javascript .function {
 }
 .footer-inner {
   color: #000;
+}
+.color-blue {
+  color: #00f;
 }
 .category-all-page .category-all-title {
   text-align: center;
