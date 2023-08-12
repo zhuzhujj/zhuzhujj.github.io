@@ -1,38 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>第一篇文章</title>
-    <url>/2023/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a>会逐步更新一些前端的笔记 面试题等</a></p>
-<a id="more"></a>
+    <title>js判断数据类型</title>
+    <url>/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="js–typeof与instanceof"><a href="#js–typeof与instanceof" class="headerlink" title="js–typeof与instanceof"></a>js–typeof与instanceof</h1><a id="more"></a>
 
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>av</p>
-<p>a</p>
-<p>a</p>
-<p>v</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>vv</p>
-<p>a</p>
-<p>a</p>
-<p>v</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>v</p>
-<p>a</p>
-<p>aa</p>
+<h2 id="js数据类型"><a href="#js数据类型" class="headerlink" title="js数据类型"></a>js数据类型</h2><ol>
+<li><code>undefined</code></li>
+<li><code>Null</code></li>
+<li><code>Boolean</code></li>
+<li><code>Number</code></li>
+<li><code>String</code></li>
+<li><code>Symbol</code></li>
+<li>引用数据类型</li>
+</ol>
+<h2 id="typeof主要用于判断基本数据类型"><a href="#typeof主要用于判断基本数据类型" class="headerlink" title="typeof主要用于判断基本数据类型"></a>typeof主要用于判断基本数据类型</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Numbers </span><br><span class="line">typeof 37 === &#x27;number&#x27;;</span><br><span class="line">// Strings </span><br><span class="line">typeof &quot;&quot; === &#x27;string&#x27;;</span><br><span class="line">// Booleans </span><br><span class="line">typeof true === &#x27;boolean&#x27;;</span><br><span class="line">// Symbols </span><br><span class="line">typeof Symbol(&#x27;foo&#x27;) === &#x27;symbol&#x27;;</span><br><span class="line">// Undefined </span><br><span class="line">typeof undefined === &#x27;undefined&#x27;; </span><br><span class="line">typeof blabla === &#x27;undefined&#x27;; // 一个未定义的变量,或者一个定义了却未赋初值的变量</span><br><span class="line">// Objects </span><br><span class="line">typeof &#123;a:1&#125; === &#x27;object&#x27;;</span><br><span class="line">type [1,2,3] = &#x27;object&#x27;</span><br><span class="line">------------------------&#x27;下面是不是有点奇怪？&#x27;--------------------------</span><br><span class="line">// 函数</span><br><span class="line">typeof function()&#123;&#125; === &#x27;function&#x27;;</span><br><span class="line">// Null</span><br><span class="line">typeof null === &#x27;object&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="instanceof判断该对象是谁的实例"><a href="#instanceof判断该对象是谁的实例" class="headerlink" title="instanceof判断该对象是谁的实例"></a>instanceof判断该对象是谁的实例</h2><blockquote>
+<p><code>instanceof</code>的判断就是根据原型链进行搜寻，在对象obj1的原型链上如果存在另一个对象obj2的原型属性，那么表达式（<code>obj1 instanceof obj2</code>）返回值为true；否则返回false。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function Parent()&#123;&#125;;</span><br><span class="line">function Child()&#123;&#125;;</span><br><span class="line">function Other()&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Child.prototype = new Parent();</span><br><span class="line">let child = new Child();</span><br><span class="line"></span><br><span class="line">child instanceof Child; // true</span><br><span class="line">child instanceof Parent; // true</span><br><span class="line">child instanceof Object; // true</span><br><span class="line">child instanceof Other; // false</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="typeof与instanceof都是判断数据类型的方法，区别如下："><a href="#typeof与instanceof都是判断数据类型的方法，区别如下：" class="headerlink" title="typeof与instanceof都是判断数据类型的方法，区别如下："></a>typeof与instanceof都是判断数据类型的方法，区别如下：</h2><ol>
+<li>typeof会返回一个变量的基本类型，instanceof返回的是一个布尔值</li>
+<li>instanceof 可以准确地判断复杂引用数据类型，但是不能正确判断基础数据类型</li>
+<li>而typeof 也存在弊端，它虽然可以判断基础数据类型（null 除外），但是引用数据类型中，除了function 类型以外，其他的也无法判断</li>
+</ol>
 ]]></content>
       <categories>
-        <category>other</category>
+        <category>笔记 面试题</category>
       </categories>
       <tags>
-        <tag>-测试</tag>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js原型原型链</title>
+    <url>/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+    <content><![CDATA[<h1 id="js–原型-原型链"><a href="#js–原型-原型链" class="headerlink" title="js–原型 原型链"></a>js–原型 原型链</h1><a id="more"></a>
+
+<blockquote>
+<p>每个函数都有一个prototype, 每个对象都有一个-proto- 指向其原型对象prototype</p>
+</blockquote>
+<h3 id="prototype："><a href="#prototype：" class="headerlink" title="prototype："></a>prototype：</h3><blockquote>
+<p>每个函数都有prototype属性 称之为原型， 因为这个属性的值是个对象，也成为原型对象</p>
+</blockquote>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><blockquote>
+<p>存放一些属性和方法</p>
+<p>实现继承</p>
+</blockquote>
+<h3 id="proto-："><a href="#proto-：" class="headerlink" title="-proto-_："></a>-proto-_：</h3><blockquote>
+<p>每个对象对象都有-proto-属性</p>
+</blockquote>
+<h4 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h4><blockquote>
+<p>这个属性指向它的原型对象</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const arr = new Array(1,2,3)</span><br><span class="line">arr.__proto__ === Array.prototype // true</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>笔记 面试题</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -229,6 +263,41 @@
       </categories>
       <tags>
         <tag>vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇文章</title>
+    <url>/2023/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a>会逐步更新一些前端的笔记 面试题等</a></p>
+<a id="more"></a>
+
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>av</p>
+<p>a</p>
+<p>a</p>
+<p>v</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>vv</p>
+<p>a</p>
+<p>a</p>
+<p>v</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>v</p>
+<p>a</p>
+<p>aa</p>
+]]></content>
+      <categories>
+        <category>other</category>
+      </categories>
+      <tags>
+        <tag>-测试</tag>
       </tags>
   </entry>
 </search>
