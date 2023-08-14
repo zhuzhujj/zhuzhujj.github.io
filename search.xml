@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>jsthis指向问题</title>
+    <url>/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="js–this指向问题"><a href="#js–this指向问题" class="headerlink" title="js–this指向问题"></a>js–this指向问题</h1><a id="more"></a>
+
+<h2 id="1-普通"><a href="#1-普通" class="headerlink" title="1.普通"></a>1.普通</h2><blockquote>
+<p>this有三种指向 ，原则为谁调用指向谁。</p>
+</blockquote>
+<h3 id="1-普通函数"><a href="#1-普通函数" class="headerlink" title="1.普通函数"></a>1.普通函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name = &#x27;window&#x27;</span><br><span class="line">function sayName () &#123;</span><br><span class="line">    console.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">sayName()// 指向window  打印window</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-new构造函数"><a href="#2-new构造函数" class="headerlink" title="2.new构造函数"></a>2.new构造函数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const a = new Object()</span><br><span class="line">a.name = &#x27;new&#x27;</span><br><span class="line">a.say = sayName</span><br><span class="line">console.log(a.say())// 打印new  this指向实例a</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-对象方法"><a href="#3-对象方法" class="headerlink" title="3.对象方法"></a>3.对象方法</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const people = &#123;</span><br><span class="line">    name: &#x27;jake&#x27;,</span><br><span class="line">    age: 18,</span><br><span class="line">    say : sayName</span><br><span class="line">&#125;</span><br><span class="line">people.say() // this指向people 打印jake</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-箭头函数"><a href="#2-箭头函数" class="headerlink" title="2.箭头函数"></a>2.箭头函数</h2><blockquote>
+<p>箭头函数中没有this, 但是根据作用域链 会向上找。定义在哪里 就在那里的上一层找</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name = &#x27;window&#x27;</span><br><span class="line">const  sayName = ()=&gt;&#123;</span><br><span class="line">    conlose.log(this.name)</span><br><span class="line">&#125;</span><br><span class="line">sayName() // 指向window, 打印 window</span><br><span class="line"></span><br><span class="line">const people = &#123;</span><br><span class="line">    name: &#x27;jake&#x27;,</span><br><span class="line">    age: 18,</span><br><span class="line">    say : sayName</span><br><span class="line">&#125;</span><br><span class="line">people.say // 打印window</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>面试题</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js判断数据类型</title>
     <url>/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="js–typeof与instanceof"><a href="#js–typeof与instanceof" class="headerlink" title="js–typeof与instanceof"></a>js–typeof与instanceof</h1><a id="more"></a>
