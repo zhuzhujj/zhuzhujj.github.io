@@ -5,11 +5,21 @@
         <link>http://example.com</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 14 Aug 2023 21:49:10 +0800</pubDate>
-        <lastBuildDate>Mon, 14 Aug 2023 21:49:10 +0800</lastBuildDate>
+        <pubDate>Wed, 16 Aug 2023 19:36:07 +0800</pubDate>
+        <lastBuildDate>Wed, 16 Aug 2023 19:36:07 +0800</lastBuildDate>
         <category>js</category>
+        <category>测试</category>
         <category>vue3</category>
-        <category>-测试</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/</guid>
+            <title>虚拟dom及render渲染器</title>
+            <link>http://example.com/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/</link>
+            <category>vue3</category>
+            <pubDate>Wed, 16 Aug 2023 19:36:07 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;简单手写虚拟dom及渲染器&#34;&gt;&lt;a href=&#34;#简单手写虚拟dom及渲染器&#34; class=&#34;headerlink&#34; title=&#34;简单手写虚拟dom及渲染器&#34;&gt;&lt;/a&gt;简单手写虚拟dom及渲染器&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/</guid>
             <title>js字符串方法</title>
@@ -558,7 +568,7 @@
             <guid isPermalink="true">http://example.com/2023/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
             <title>第一篇文章</title>
             <link>http://example.com/2023/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link>
-            <category>-测试</category>
+            <category>测试</category>
             <pubDate>Thu, 10 Aug 2023 22:38:21 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;&lt;a&gt;会逐步更新一些前端的笔记 面试题等&lt;/a&gt;&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
