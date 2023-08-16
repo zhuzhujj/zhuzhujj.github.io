@@ -1,32 +1,17 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>zhuZhu • Posts by &#34;面试题&#34; category</title>
-        <link>http://example.com</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Wed, 16 Aug 2023 19:36:07 +0800</pubDate>
-        <lastBuildDate>Wed, 16 Aug 2023 19:36:07 +0800</lastBuildDate>
-        <category>js</category>
-        <category>vue3</category>
-        <category>测试</category>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/</guid>
-            <title>虚拟dom及render渲染器</title>
-            <link>http://example.com/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/</link>
-            <category>vue3</category>
-            <pubDate>Wed, 16 Aug 2023 19:36:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;简单手写虚拟dom及渲染器&#34;&gt;&lt;a href=&#34;#简单手写虚拟dom及渲染器&#34; class=&#34;headerlink&#34; title=&#34;简单手写虚拟dom及渲染器&#34;&gt;&lt;/a&gt;简单手写虚拟dom及渲染器&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
-
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/</guid>
-            <title>js字符串方法</title>
-            <link>http://example.com/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/</link>
-            <category>js</category>
-            <pubDate>Mon, 14 Aug 2023 21:49:10 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;js–字符串方法&#34;&gt;&lt;a href=&#34;#js–字符串方法&#34; class=&#34;headerlink&#34; title=&#34;js–字符串方法&#34;&gt;&lt;/a&gt;js–字符串方法&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>zhuZhu • Posts by &#34;知识点&#34; category</title>
+    <link href="http://example.com" />
+    <updated>2023-08-14T13:49:10.000Z</updated>
+    <category term="js" />
+    <category term="vue3" />
+    <category term="测试" />
+    <entry>
+        <id>http://example.com/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/</id>
+        <title>js字符串方法</title>
+        <link rel="alternate" href="http://example.com/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/"/>
+        <content type="html">&lt;h1 id=&#34;js–字符串方法&#34;&gt;&lt;a href=&#34;#js–字符串方法&#34; class=&#34;headerlink&#34; title=&#34;js–字符串方法&#34;&gt;&lt;/a&gt;js–字符串方法&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 
 &lt;blockquote&gt;
 &lt;h2 id=&#34;操作方法-转换方法-模板匹配方法&#34;&gt;&lt;a href=&#34;#操作方法-转换方法-模板匹配方法&#34; class=&#34;headerlink&#34; title=&#34;操作方法 转换方法 模板匹配方法&#34;&gt;&lt;/a&gt;操作方法 转换方法 模板匹配方法&lt;/h2&gt;&lt;/blockquote&gt;
@@ -123,15 +108,15 @@
 
 &lt;h3 id=&#34;replace&#34;&gt;&lt;a href=&#34;#replace&#34; class=&#34;headerlink&#34; title=&#34;#replace()&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly92dWUzanMuY24vaW50ZXJ2aWV3L0phdmFTY3JpcHQvc3RyaW5nX2FwaS5odG1sI3JlcGxhY2U=&#34;&gt;#&lt;/span&gt;replace()&lt;/h3&gt;&lt;p&gt;接收两个参数，第一个参数为匹配的内容，第二个参数为替换的元素（可用函数）&lt;/p&gt;
 &lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; text = &lt;span class=&#34;string&#34;&gt;&amp;quot;cat, bat, sat, fat&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = text.&lt;span class=&#34;title function_&#34;&gt;replace&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;at&amp;quot;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;quot;ond&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(result); &lt;span class=&#34;comment&#34;&gt;// &amp;quot;cond, bat, sat, fat&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</guid>
-            <title>jsthis指向问题</title>
-            <link>http://example.com/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</link>
-            <category>js</category>
-            <pubDate>Mon, 14 Aug 2023 10:56:55 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;js–this指向问题&#34;&gt;&lt;a href=&#34;#js–this指向问题&#34; class=&#34;headerlink&#34; title=&#34;js–this指向问题&#34;&gt;&lt;/a&gt;js–this指向问题&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+</content>
+        <category term="js" />
+        <updated>2023-08-14T13:49:10.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/</id>
+        <title>jsthis指向问题</title>
+        <link rel="alternate" href="http://example.com/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;js–this指向问题&#34;&gt;&lt;a href=&#34;#js–this指向问题&#34; class=&#34;headerlink&#34; title=&#34;js–this指向问题&#34;&gt;&lt;/a&gt;js–this指向问题&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 
 &lt;h2 id=&#34;1-普通&#34;&gt;&lt;a href=&#34;#1-普通&#34; class=&#34;headerlink&#34; title=&#34;1.普通&#34;&gt;&lt;/a&gt;1.普通&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;this有三种指向 ，原则为谁调用指向谁。&lt;/p&gt;
@@ -149,15 +134,15 @@
 &lt;/blockquote&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;var name = &amp;#x27;window&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;const  sayName = ()=&amp;gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    conlose.log(this.name)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sayName() // 指向window, 打印 window&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;const people = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    name: &amp;#x27;jake&amp;#x27;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    age: 18,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    say : sayName&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;people.say // 打印window&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/13/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</guid>
-            <title>js数组方法</title>
-            <link>http://example.com/2023/08/13/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</link>
-            <category>js</category>
-            <pubDate>Sun, 13 Aug 2023 20:53:27 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;js–数组方法&#34;&gt;&lt;a href=&#34;#js–数组方法&#34; class=&#34;headerlink&#34; title=&#34;js–数组方法&#34;&gt;&lt;/a&gt;js–数组方法&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+</content>
+        <category term="js" />
+        <updated>2023-08-14T02:56:55.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2023/08/13/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</id>
+        <title>js数组方法</title>
+        <link rel="alternate" href="http://example.com/2023/08/13/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/"/>
+        <content type="html">&lt;h1 id=&#34;js–数组方法&#34;&gt;&lt;a href=&#34;#js–数组方法&#34; class=&#34;headerlink&#34; title=&#34;js–数组方法&#34;&gt;&lt;/a&gt;js–数组方法&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;数组常见方法：操作方法 排序方法 转换方法 迭代方法，&lt;/p&gt;
@@ -306,15 +291,15 @@
 &lt;/ul&gt;
 &lt;p&gt;案例&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;javascript复制代码&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; arr = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;7&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; sum = arr.&lt;span class=&#34;title function_&#34;&gt;reduce&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;pre,cur&lt;/span&gt;)=&amp;gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; pre +cur&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(sum)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
-            <title>js原型原型链</title>
-            <link>http://example.com/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
-            <category>js</category>
-            <pubDate>Sat, 12 Aug 2023 19:38:23 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;js–原型-原型链&#34;&gt;&lt;a href=&#34;#js–原型-原型链&#34; class=&#34;headerlink&#34; title=&#34;js–原型 原型链&#34;&gt;&lt;/a&gt;js–原型 原型链&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+</content>
+        <category term="js" />
+        <updated>2023-08-13T12:53:27.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/</id>
+        <title>js原型原型链</title>
+        <link rel="alternate" href="http://example.com/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+        <content type="html">&lt;h1 id=&#34;js–原型-原型链&#34;&gt;&lt;a href=&#34;#js–原型-原型链&#34; class=&#34;headerlink&#34; title=&#34;js–原型 原型链&#34;&gt;&lt;/a&gt;js–原型 原型链&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;每个函数都有一个prototype, 每个对象都有一个-proto- 指向其原型对象prototype&lt;/p&gt;
@@ -334,15 +319,15 @@
 &lt;/blockquote&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;const arr = new Array(1,2,3)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;arr.__proto__ === Array.prototype // true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-            <title>js判断数据类型</title>
-            <link>http://example.com/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
-            <category>js</category>
-            <pubDate>Sat, 12 Aug 2023 19:29:14 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;js–typeof与instanceof&#34;&gt;&lt;a href=&#34;#js–typeof与instanceof&#34; class=&#34;headerlink&#34; title=&#34;js–typeof与instanceof&#34;&gt;&lt;/a&gt;js–typeof与instanceof&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+</content>
+        <category term="js" />
+        <updated>2023-08-12T11:38:23.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+        <title>js判断数据类型</title>
+        <link rel="alternate" href="http://example.com/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+        <content type="html">&lt;h1 id=&#34;js–typeof与instanceof&#34;&gt;&lt;a href=&#34;#js–typeof与instanceof&#34; class=&#34;headerlink&#34; title=&#34;js–typeof与instanceof&#34;&gt;&lt;/a&gt;js–typeof与instanceof&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 
 &lt;h2 id=&#34;js数据类型&#34;&gt;&lt;a href=&#34;#js数据类型&#34; class=&#34;headerlink&#34; title=&#34;js数据类型&#34;&gt;&lt;/a&gt;js数据类型&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;undefined&lt;/code&gt;&lt;/li&gt;
@@ -369,7 +354,8 @@
 &lt;li&gt;instanceof 可以准确地判断复杂引用数据类型，但是不能正确判断基础数据类型&lt;/li&gt;
 &lt;li&gt;而typeof 也存在弊端，它虽然可以判断基础数据类型（null 除外），但是引用数据类型中，除了function 类型以外，其他的也无法判断&lt;/li&gt;
 &lt;/ol&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="js" />
+        <updated>2023-08-12T11:29:14.000Z</updated>
+    </entry>
+</feed>

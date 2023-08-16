@@ -8,8 +8,8 @@
         <pubDate>Wed, 16 Aug 2023 19:36:07 +0800</pubDate>
         <lastBuildDate>Wed, 16 Aug 2023 19:36:07 +0800</lastBuildDate>
         <category>js</category>
-        <category>测试</category>
         <category>vue3</category>
+        <category>测试</category>
         <item>
             <guid isPermalink="true">http://example.com/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/</guid>
             <title>虚拟dom及render渲染器</title>
