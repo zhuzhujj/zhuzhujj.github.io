@@ -3,10 +3,20 @@
     <id>http://example.com</id>
     <title>zhuZhu</title>
     <link href="http://example.com" />
-    <updated>2023-08-18T04:47:09.000Z</updated>
+    <updated>2023-08-21T03:51:24.000Z</updated>
     <category term="js" />
     <category term="vue3" />
+    <category term="egg.js" />
     <category term="测试" />
+    <entry>
+        <id>http://example.com/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/</id>
+        <title>egg.js介绍与安装</title>
+        <link rel="alternate" href="http://example.com/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/"/>
+        <content type="html">&lt;h1 id=&#34;egg-js&#34;&gt;&lt;a href=&#34;#egg-js&#34; class=&#34;headerlink&#34; title=&#34;egg.js&#34;&gt;&lt;/a&gt;egg.js&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+</content>
+        <category term="egg.js" />
+        <updated>2023-08-21T03:51:24.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2023/08/18/diff%E7%AE%97%E6%B3%95/</id>
         <title>diff算法</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>zhuZhu • Posts by &#34;nodejs&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 21 Aug 2023 11:51:24 +0800</pubDate>
+        <lastBuildDate>Mon, 21 Aug 2023 11:51:24 +0800</lastBuildDate>
+        <category>js</category>
+        <category>vue3</category>
+        <category>egg.js</category>
+        <category>测试</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/</guid>
+            <title>egg.js介绍与安装</title>
+            <link>http://example.com/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/</link>
+            <category>egg.js</category>
+            <pubDate>Mon, 21 Aug 2023 11:51:24 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;egg-js&#34;&gt;&lt;a href=&#34;#egg-js&#34; class=&#34;headerlink&#34; title=&#34;egg.js&#34;&gt;&lt;/a&gt;egg.js&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
