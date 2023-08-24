@@ -1,0 +1,654 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="zhuZhu" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="zhuZhu" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="zhuZhu" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="egg.js" />
+
+
+<link rel="canonical" href="http://example.com/2023/08/21/egg-js%E7%AC%94%E8%AE%B0/">
+
+
+
+  <title>
+egg.js笔记 - NodeJS |
+Yume Shoka = zhuZhu</title>
+<meta name="generator" content="Hexo 5.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">egg.js笔记
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-08-21 19:27:14">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-21T19:27:14+08:00">2023-08-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="/images/p13.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/NodeJS/" itemprop="item" rel="index" title="分类于 NodeJS"><span itemprop="name">NodeJS</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/21/egg-js%E7%AC%94%E8%AE%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="mawang">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="zhuZhu">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="1-基本使用"><a href="#1-基本使用" class="headerlink" title="1.基本使用"></a>1.基本使用</h2><a id="more"></a>
+
+<blockquote>
+<p>在app/controller/**.js 中编写逻辑，  在app/router.js中注册</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line"></span><br><span class="line">const &#123; Controller &#125; = require(&#x27;egg&#x27;);</span><br><span class="line"></span><br><span class="line">class HomeController extends Controller &#123;</span><br><span class="line">  async index() &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    ctx.body = &#x27;hi！！&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">  async sayMin() &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    ctx.body = &#x27;hi！！&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">module.exports = HomeController;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注册</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @param &#123;Egg.Application&#125; app - egg application</span><br><span class="line"> */</span><br><span class="line">module.exports = app =&gt; &#123;</span><br><span class="line">  const &#123; router, controller &#125; = app;</span><br><span class="line">  router.get(&#x27;/&#x27;, controller.home.index);</span><br><span class="line">  router.get(&#x27;/my&#x27;, controller.home.sayMin);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-get-post-传参"><a href="#2-get-post-传参" class="headerlink" title="2.get post 传参"></a>2.get post 传参</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// get自由传参</span><br><span class="line">  async index2 () &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    ctx.body = ctx.query</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  // get固定参数</span><br><span class="line">  async index3 () &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    ctx.body = ctx.params</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  // post</span><br><span class="line">  async index4 () &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">      state: 200,</span><br><span class="line">      data: ctx.request.body</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>router.js 注册</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">router.get(&#x27;/mine2&#x27;, controller.mine.index2);</span><br><span class="line">router.get(&#x27;/mine3/:name/:age&#x27;, controller.mine.index3);</span><br><span class="line">router.post(&#x27;/mine4&#x27;, controller.mine.index4);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-service使用"><a href="#3-service使用" class="headerlink" title="3.service使用"></a>3.service使用</h2><blockquote>
+<p>用于编写业务逻辑层, 一般数据库操作</p>
+</blockquote>
+<p>app/service/***.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line"></span><br><span class="line">const Service = require(&quot;egg&quot;).Service</span><br><span class="line"></span><br><span class="line">class Mine extends Service &#123;</span><br><span class="line">  async geta (id) &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      id: id,</span><br><span class="line">      // 模拟数据库返回结果</span><br><span class="line">      name: &#x27;jake&#x27;,</span><br><span class="line">      age: 18</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = Mine</span><br></pre></td></tr></table></figure>
+
+<p>app/controller/ ***.js使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// servies</span><br><span class="line">async index5 () &#123;</span><br><span class="line">  const &#123; ctx &#125; = this;</span><br><span class="line">  const res = await ctx.service.mine.geta(&#x27;255&#x27;)</span><br><span class="line">  ctx.body = res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>app/router.js注册</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.get(&#x27;/mine5&#x27;, controller.mine.index5);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-EJS模板引擎"><a href="#4-EJS模板引擎" class="headerlink" title="4. EJS模板引擎"></a>4. EJS模板引擎</h2><blockquote>
+<p>对 SEO 非常友好</p>
+<p>SPA实现不了的某些内容 模板引擎可以</p>
+</blockquote>
+<ol>
+<li>安装</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i egg-view-ejs --save</span><br></pre></td></tr></table></figure>
+
+<p>2.配置</p>
+<p>cofig/plugin.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line"></span><br><span class="line">exports.ejs = &#123;</span><br><span class="line">  // 开启</span><br><span class="line">  enable: true,</span><br><span class="line">  // 目录</span><br><span class="line">  package: &quot;egg-view-ejs&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>config/config.default.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//ejs配置</span><br><span class="line">config.view = &#123;</span><br><span class="line">  mapping: &#123;</span><br><span class="line">    &quot;.html&quot;: &quot;ejs&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">config.ejs = &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用</p>
+<blockquote>
+<p>ctx.render(‘’)引用的文件必须放在 app/view/***.html中</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// ejs</span><br><span class="line">async index6 () &#123;</span><br><span class="line">  const &#123; ctx &#125; = this;</span><br><span class="line">  await ctx.render(&#x27;m1.html&#x27;) // ./app/view/*.html</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="4">
+<li>语法使用</li>
+</ol>
+<blockquote>
+<p>传递数据 &lt;1%1=1 **1%1&gt;</p>
+<p>循环渲染</p>
+<p>  &lt;1%1 fo1r(var i=0; i&lt;canDo.length; i++){1%1&gt;1</p>
+<p>   循环体</p>
+<p>  &lt;1%1}1%1&gt;1</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 在第二个参数写上要传递的参数</span><br><span class="line">  // ejs</span><br><span class="line">  async index6 () &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    await ctx.render(&#x27;m1.html&#x27;, &#123;</span><br><span class="line">      name: &#x27;jake&#x27;,</span><br><span class="line">      age: 18,</span><br><span class="line">      canDo: [</span><br><span class="line">        &#x27;aaa&#x27;,</span><br><span class="line">        &#x27;bbb&#x27;,</span><br><span class="line">        &#x27;ccc&#x27;</span><br><span class="line">      ]</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// M1.html</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;啊啊啊&lt;/h1&gt;</span><br><span class="line">  &lt;h2&gt;姓名： &lt;%= name%&gt;&lt;/h2&gt;</span><br><span class="line">  &lt;h2&gt;年龄： &lt;%= age%&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;% for(var i=0; i&lt;canDo.length; i++)&#123;%&gt;</span><br><span class="line">      &lt;li&gt;&lt;%= canDo[i] %&gt;&lt;/li&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>引入公用代码片段</p>
+<p>&lt;%-include(“***.html”) %&gt;</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%-include(&quot;header.html&quot;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>引入css样式 和 js</p>
+</blockquote>
+<p>1.将 css js 文件定义到 app/public 中 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在页面文件中正常引入</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./public/css/a.css&quot;&gt;</span><br><span class="line">&lt;script src=&quot;../public/js/a.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+      <div class="tags">
+          <a href="/tags/egg-js/" rel="tag"><i class="ic i-tag"></i> egg.js</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-08-24 11:32:15" itemprop="dateModified" datetime="2023-08-24T11:32:15+08:00">2023-08-24</time>
+  </span>
+  <span id="2023/08/21/egg-js笔记/" class="item leancloud_visitors" data-flag-title="egg.js笔记" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechartpay.png" alt="mawang 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="mawang 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>mawang <i class="ic i-at"><em>@</em></i>zhuZhu
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2023/08/21/egg-js%E7%AC%94%E8%AE%B0/" title="egg.js笔记">http://example.com/2023/08/21/egg-js笔记/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/" itemprop="url" rel="prev" data-background-image="&#x2F;images&#x2F;p12.jpg" title="egg.js介绍与安装">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> NodeJs</span>
+  <h3>egg.js介绍与安装</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/08/22/TypeScript/" itemprop="url" rel="next" data-background-image="&#x2F;images&#x2F;p14.jpg" title="TypeScript">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 笔记</span>
+  <h3>TypeScript</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">1.基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-get-post-%E4%BC%A0%E5%8F%82"><span class="toc-number">2.</span> <span class="toc-text">2.get post 传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-service%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3.service使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-EJS%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-number">4.</span> <span class="toc-text">4. EJS模板引擎</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/08/21/egg-js%E7%AC%94%E8%AE%B0/" rel="bookmark" title="egg.js笔记">egg.js笔记</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="mawang"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">mawang</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">14</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">5</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3podXpodWpq" title="https:&#x2F;&#x2F;github.com&#x2F;zhuzhujj"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/08/22/TypeScript/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
+</div>
+
+    <span><a href="/2023/08/22/TypeScript/" title="TypeScript">TypeScript</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/other/" title="分类于 other">other</a>
+</div>
+
+    <span><a href="/2023/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="第一篇文章">第一篇文章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
+</div>
+
+    <span><a href="/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" title="jsthis指向问题">jsthis指向问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
+</div>
+
+    <span><a href="/2023/08/11/vue3/" title="vue3">vue3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
+</div>
+
+    <span><a href="/2023/08/17/%E5%AF%B9%E8%B1%A1%E6%93%8D%E4%BD%9C%E7%9A%8414%E7%A7%8D%E6%96%B9%E6%B3%95/" title="对象操作的14种方法">对象操作的14种方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E6%BA%90%E7%A0%81/" title="分类于 源码">源码</a>
+</div>
+
+    <span><a href="/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/" title="虚拟dom及render渲染器">虚拟dom及render渲染器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
+</div>
+
+    <span><a href="/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/" title="js字符串方法">js字符串方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/NodeJS/" title="分类于 NodeJS">NodeJS</a>
+</div>
+
+    <span><a href="/2023/08/21/egg-js%E7%AC%94%E8%AE%B0/" title="egg.js笔记">egg.js笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/NodeJs/" title="分类于 NodeJs">NodeJs</a>
+</div>
+
+    <span><a href="/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/" title="egg.js介绍与安装">egg.js介绍与安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
+</div>
+
+    <span><a href="/2023/08/12/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="js判断数据类型">js判断数据类型</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">mawang @ Yume Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">63k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">58 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/08/21/egg-js笔记/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
