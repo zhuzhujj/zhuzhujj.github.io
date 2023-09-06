@@ -5,6 +5,16 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2023/09/06/instanceof%E5%AE%9E%E7%8E%B0/",
+            "url": "http://example.com/2023/09/06/instanceof%E5%AE%9E%E7%8E%B0/",
+            "title": "instanceof实现",
+            "date_published": "2023-09-06T01:30:10.000Z",
+            "content_html": "<h1 id=\"instanceof实现原理\"><a href=\"#instanceof实现原理\" class=\"headerlink\" title=\"instanceof实现原理\"></a>instanceof实现原理</h1><a id=\"more\"></a>\n\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">//  instanceof 实现</span><br><span class=\"line\">//  [] instanceof Array</span><br><span class=\"line\">function myInstanceof (left, right) &#123;</span><br><span class=\"line\">  let proto = Object.getPrototypeOf(left) // 获取__proto__</span><br><span class=\"line\">  let protoType = right.prototype</span><br><span class=\"line\"></span><br><span class=\"line\">  // 循环判断 </span><br><span class=\"line\">  while (1) &#123; // 在原型链上寻找</span><br><span class=\"line\">    if (!proto) return false</span><br><span class=\"line\">    if (proto == protoType) return true</span><br><span class=\"line\"></span><br><span class=\"line\"></span><br><span class=\"line\">    proto = Object.getPrototypeOf(proto)</span><br><span class=\"line\">  &#125;</span><br><span class=\"line\">&#125;</span><br><span class=\"line\"></span><br><span class=\"line\">console.log(myInstanceof(1, Array));</span><br></pre></td></tr></table></figure>\n\n",
+            "tags": [
+                "js"
+            ]
+        },
+        {
             "id": "http://example.com/2023/08/22/TypeScript/",
             "url": "http://example.com/2023/08/22/TypeScript/",
             "title": "TypeScript",

@@ -79,7 +79,7 @@ Yume Shoka = zhuZhu</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>3k</span>
+    <span>7.1k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -87,7 +87,7 @@ Yume Shoka = zhuZhu</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>3 分钟</span>
+    <span>6 分钟</span>
   </span>
 </div>
 
@@ -228,13 +228,10 @@ Yume Shoka = zhuZhu</title>
 <ol start="4">
 <li>语法使用</li>
 </ol>
-<blockquote>
-<p>传递数据 &lt;1%1=1 **1%1&gt;</p>
-<p>循环渲染</p>
-<p>  &lt;1%1 fo1r(var i=0; i&lt;canDo.length; i++){1%1&gt;1</p>
-<p>   循环体</p>
-<p>  &lt;1%1}1%1&gt;1</p>
-</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">传递数据 &lt;%= **%&gt;</span><br><span class="line"></span><br><span class="line">循环渲染</span><br><span class="line"></span><br><span class="line">&lt;% for(var i=0; i&lt;canDo.length; i++)&#123;%&gt;</span><br><span class="line"></span><br><span class="line">循环体</span><br><span class="line"></span><br><span class="line">&lt;%&#125;%&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 在第二个参数写上要传递的参数</span><br><span class="line">  // ejs</span><br><span class="line">  async index6 () &#123;</span><br><span class="line">    const &#123; ctx &#125; = this;</span><br><span class="line">    await ctx.render(&#x27;m1.html&#x27;, &#123;</span><br><span class="line">      name: &#x27;jake&#x27;,</span><br><span class="line">      age: 18,</span><br><span class="line">      canDo: [</span><br><span class="line">        &#x27;aaa&#x27;,</span><br><span class="line">        &#x27;bbb&#x27;,</span><br><span class="line">        &#x27;ccc&#x27;</span><br><span class="line">      ]</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// M1.html</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;啊啊啊&lt;/h1&gt;</span><br><span class="line">  &lt;h2&gt;姓名： &lt;%= name%&gt;&lt;/h2&gt;</span><br><span class="line">  &lt;h2&gt;年龄： &lt;%= age%&gt;&lt;/h2&gt;</span><br><span class="line"></span><br><span class="line">  &lt;ul&gt;</span><br><span class="line">    &lt;% for(var i=0; i&lt;canDo.length; i++)&#123;%&gt;</span><br><span class="line">      &lt;li&gt;&lt;%= canDo[i] %&gt;&lt;/li&gt;</span><br><span class="line">    &lt;%&#125;%&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
@@ -254,6 +251,65 @@ Yume Shoka = zhuZhu</title>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在页面文件中正常引入</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./public/css/a.css&quot;&gt;</span><br><span class="line">&lt;script src=&quot;../public/js/a.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 
+
+<h2 id="5-cookie"><a href="#5-cookie" class="headerlink" title="5.cookie"></a>5.cookie</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzQ3">对Cookie的简单了解</span></p>
+<blockquote>
+<p>HTTP请求是无状态的，但是在开发时，有些情况是需要知道请求的人是谁的。为了解决这个问题，HTTP协议设计了一个特殊的请求头：<code>Cookie</code>。服务端可以通过响应头（set-cookie）将少量数据响应给客户端，浏览器会遵循协议将数据保留，并在下一次请求同一个服务的时候带上。</p>
+</blockquote>
+<p>简单来说，就相当于你去上班，给你发了一个工牌，这样你就可以进出办公大楼了。你也可以想象成，你去红浪漫，办了一张VIP卡。每次去拿出卡，可以打9折一样。</p>
+<p><a target="_blank" rel="noopener" href="https://jspang.com/article/79#toc348"><strong>编写前基本准备</strong></a></p>
+<p>你初步了解Cookie后，我们来进行实际操作。</p>
+<p>我们先来了解在Egg下，如何实现Cookie的增删改查，这也是最基本的操作。（提示，在实际开发中Cookie的操作应该放在服务端，而不是用客户端的JS操作。）</p>
+<p>在讲解之前，我们还是要作一些提前的代码编写，比如设置好对应的按钮、Controller方法和路由。</p>
+<p>我们先来到上节课的<code>/app/view/jspang.html</code>模板中，编写四个按钮，分别是<code>增加Cookie</code>、<code>删除Cookie</code>、<code>修改Cookie</code>和<code>查看Cookie</code>。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;add()&quot;</span>&gt;</span>增加Cookie<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;del()&quot;</span>&gt;</span>删除Cookie<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;editor()&quot;</span>&gt;</span>修改Cookie<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;show()&quot;</span>&gt;</span>查看Cookie<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>写完按钮后，增加对应的方法JavaScript。</p>
+<p>可以先写一个方法（function），然后其它的复制后进行修改。就可以快速写出这些代码了。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="title function_">fetch</span>(<span class="string">&quot;/add&quot;</span>,&#123;</span><br><span class="line">            <span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">            <span class="attr">headers</span>:&#123;</span><br><span class="line">                <span class="string">&quot;Content-type&quot;</span>:<span class="string">&quot;application/json&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">del</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="title function_">fetch</span>(<span class="string">&quot;/del&quot;</span>,&#123;</span><br><span class="line">            <span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">            <span class="attr">headers</span>:&#123;</span><br><span class="line">                <span class="string">&quot;Content-type&quot;</span>:<span class="string">&quot;application/json&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">editor</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="title function_">fetch</span>(<span class="string">&quot;/editor&quot;</span>,&#123;</span><br><span class="line">            <span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">            <span class="attr">headers</span>:&#123;</span><br><span class="line">                <span class="string">&quot;Content-type&quot;</span>:<span class="string">&quot;application/json&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="title function_">fetch</span>(<span class="string">&quot;/show&quot;</span>,&#123;</span><br><span class="line">            <span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">            <span class="attr">headers</span>:&#123;</span><br><span class="line">                <span class="string">&quot;Content-type&quot;</span>:<span class="string">&quot;application/json&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>再去<code>/app/controller/jspang.js</code>文件下，增加这四个对应的方法。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="title function_">del</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="title function_">editor</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后再到<code>/app/router.js</code>中配置对应的路由</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">router.<span class="title function_">post</span>(<span class="string">&#x27;/add&#x27;</span>, controller.<span class="property">jspang</span>.<span class="property">add</span>);</span><br><span class="line">router.<span class="title function_">post</span>(<span class="string">&#x27;/del&#x27;</span>, controller.<span class="property">jspang</span>.<span class="property">del</span>);</span><br><span class="line">router.<span class="title function_">post</span>(<span class="string">&#x27;/editor&#x27;</span>, controller.<span class="property">jspang</span>.<span class="property">editor</span>);</span><br><span class="line">router.<span class="title function_">post</span>(<span class="string">&#x27;/show&#x27;</span>, controller.<span class="property">jspang</span>.<span class="property">show</span>);</span><br></pre></td></tr></table></figure>
+
+<p>作完上面这四步，我们的基本结构就有了，剩下就可以好好的学习Cookie的基本操作了。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzQ5">Cookie的增加操作</span></p>
+<p>先到<code>/app/controller/jspang.js</code>文件的<code>add( )</code>方法里编写代码。其实egg已经为我们准备好了操作Cookie的方法。直接使用就可以了。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;jspang.com&quot;</span>)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie添加成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这部分代码写完后，就可以可以在终端中开启服务，输入<code>yarn dev</code>开启。</p>
+<p>来到页面点击<code>增加Cookie</code>按钮，然后按<code>F12</code>打开调试模式，找到<code>Application</code>，可以看到<code>Cookie</code>值已经被加入进来了。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzUw">Cookie的删除操作</span></p>
+<p>再来看一下Cookie的删除操作，再来到<code>/app/controller/jspang.js</code>文件。修改<code>del( )</code>方法。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">del</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="literal">null</span>)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie删除成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写好后，直接到浏览器中点击删除，就可以删除<code>Cookie</code>了。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzUx">Cookie的修改操作</span></p>
+<p>修改操作和删除和增加一样。直接修改值就可以了。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">editor</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&#x27;bilibili&#x27;</span>)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie修改成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzUy">Cookie的显示</span></p>
+<p>显示Cookie要使用<code>ctx.cookies.get( )</code>方法。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  <span class="keyword">const</span> user=ctx.<span class="property">cookies</span>.<span class="title function_">get</span>(<span class="string">&quot;user&quot;</span>)</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(user)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie显示成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>点击按钮后，可以在VSCode的终端中显示出结果。你可以试着让它显示在页面上。</p>
+<h2 id="6-cookie配置与加密"><a href="#6-cookie配置与加密" class="headerlink" title="6.cookie配置与加密"></a>6.cookie配置与加密</h2><p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzU0">Cookie时效设置</span></p>
+<p><code>ctx.cookies.set( )</code> 方法是有三个参数的，第一个参数是key，第二个参数是value，第三个参数就可以进行配置。比如你需要配置Cookie的有效时间，可以使用<code>maxAge</code>属性。(这个时间是毫秒。)</p>
+<p>比如现在我们到<code>/app/controller/jspang.js</code>文件里，修改<code>add( )</code>方法，把<code>maxAge</code>设置为两秒，在添加Cookie两秒后，这个Cookie就会自己失效。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;jspang.com&quot;</span>,&#123;</span><br><span class="line">    <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">2</span></span><br><span class="line">  &#125;)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie添加成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9qc3BhbmcuY29tL2FydGljbGUvNzkjdG9jMzU1">HttpOnly的设置</span></p>
+<p>伪造Cookie来绕过登录是黑客经常使用的一种手段，所以为了安全，Egg.js默认设置只允许服务端来操作Cookie。</p>
+<p>比如现在你通过JS的方式<code>document.cookie</code>获取Cookie是不能获取的(需要在浏览器的控制台输入获取)。当我们想通过客户端操作Cookie时，可以通过下面的代码进行设置。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sync <span class="title function_">add</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> ctx = <span class="variable language_">this</span>.<span class="property">ctx</span></span><br><span class="line">  ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;jspang.com&quot;</span>,&#123;</span><br><span class="line">    <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>,</span><br><span class="line">    <span class="attr">httpOnly</span>:<span class="literal">false</span></span><br><span class="line">  &#125;)</span><br><span class="line">  ctx.<span class="property">body</span> = &#123;</span><br><span class="line">    <span class="attr">status</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&#x27;Cookie添加成功&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面设置了<code>httpOnly:false</code>，再次刷新页面，然后看浏览器控制台的<code>HttpOnly</code>就变成<code>false</code>属性了。</p>
+<p>中文问题</p>
+<p>加密只要在第三个参数中，加入<code>encrypt:true</code>，就可以加密成功。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctx.<span class="property">cookies</span>.<span class="title function_">set</span>(<span class="string">&quot;user&quot;</span>,<span class="string">&quot;技术胖&quot;</span>,&#123;</span><br><span class="line">  <span class="attr">encrypt</span>:<span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
       <div class="tags">
           <a href="/tags/egg-js/" rel="tag"><i class="ic i-tag"></i> egg.js</a>
       </div>
@@ -267,7 +323,7 @@ Yume Shoka = zhuZhu</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-08-24 12:03:40" itemprop="dateModified" datetime="2023-08-24T12:03:40+08:00">2023-08-24</time>
+    <time title="修改时间：2023-08-27 21:59:48" itemprop="dateModified" datetime="2023-08-27T21:59:48+08:00">2023-08-27</time>
   </span>
   <span id="2023/08/21/egg-js笔记/" class="item leancloud_visitors" data-flag-title="egg.js笔记" title="阅读次数">
       <span class="icon">
@@ -357,7 +413,7 @@ Yume Shoka = zhuZhu</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">1.基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-get-post-%E4%BC%A0%E5%8F%82"><span class="toc-number">2.</span> <span class="toc-text">2.get post 传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-service%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3.service使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-EJS%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-number">4.</span> <span class="toc-text">4. EJS模板引擎</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">1.基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-get-post-%E4%BC%A0%E5%8F%82"><span class="toc-number">2.</span> <span class="toc-text">2.get post 传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-service%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3.service使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-EJS%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E"><span class="toc-number">4.</span> <span class="toc-text">4. EJS模板引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-cookie"><span class="toc-number">5.</span> <span class="toc-text">5.cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-cookie%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8A%A0%E5%AF%86"><span class="toc-number">6.</span> <span class="toc-text">6.cookie配置与加密</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -375,7 +431,7 @@ Yume Shoka = zhuZhu</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">15</span>
+        <span class="count">17</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -475,10 +531,9 @@ Yume Shoka = zhuZhu</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
 </div>
 
-    <span><a href="/2023/08/11/vue3/" title="vue3">vue3</a></span>
+    <span><a href="/2023/08/27/nuxt/" title="nuxt">nuxt</a></span>
   </li>
 
       
@@ -497,12 +552,32 @@ Yume Shoka = zhuZhu</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
 </div>
 
-    <span><a href="/2023/08/13/js%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/" title="js数组方法">js数组方法</a></span>
+    <span><a href="/2023/08/22/TypeScript/" title="TypeScript">TypeScript</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E6%BA%90%E7%A0%81/" title="分类于 源码">源码</a>
+</div>
+
+    <span><a href="/2023/08/16/%E8%99%9A%E6%8B%9Fdom%E5%8F%8Arender%E6%B8%B2%E6%9F%93%E5%99%A8/" title="虚拟dom及render渲染器">虚拟dom及render渲染器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
+</div>
+
+    <span><a href="/2023/09/06/instanceof%E5%AE%9E%E7%8E%B0/" title="instanceof实现">instanceof实现</a></span>
   </li>
 
       
@@ -524,7 +599,7 @@ Yume Shoka = zhuZhu</title>
 <a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
 </div>
 
-    <span><a href="/2023/08/14/js%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95/" title="js字符串方法">js字符串方法</a></span>
+    <span><a href="/2023/08/14/jsthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" title="jsthis指向问题">jsthis指向问题</a></span>
   </li>
 
       
@@ -534,40 +609,7 @@ Yume Shoka = zhuZhu</title>
 <a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
 </div>
 
-    <span><a href="/2023/08/17/Set-Map/" title="Set,Map">Set,Map</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%9F%A5%E8%AF%86%E7%82%B9/" title="分类于 知识点">知识点</a>
-</div>
-
-    <span><a href="/2023/08/12/js%E5%8E%9F%E5%9E%8B%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="js原型原型链">js原型原型链</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/08/27/nuxt/" title="nuxt">nuxt</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E6%BA%90%E7%A0%81/" title="分类于 源码">源码</a>
-</div>
-
-    <span><a href="/2023/08/18/diff%E7%AE%97%E6%B3%95/" title="diff算法">diff算法</a></span>
+    <span><a href="/2023/08/11/vue3/" title="vue3">vue3</a></span>
   </li>
 
       
@@ -578,6 +620,16 @@ Yume Shoka = zhuZhu</title>
 </div>
 
     <span><a href="/2023/08/21/egg-js%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/" title="egg.js介绍与安装">egg.js介绍与安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AC%94%E8%AE%B0/" title="分类于 笔记">笔记</a>
+</div>
+
+    <span><a href="/2023/08/17/%E5%AF%B9%E8%B1%A1%E6%93%8D%E4%BD%9C%E7%9A%8414%E7%A7%8D%E6%96%B9%E6%B3%95/" title="对象操作的14种方法">对象操作的14种方法</a></span>
   </li>
 
   </ul>
@@ -602,13 +654,13 @@ Yume Shoka = zhuZhu</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">94k 字</span>
+    <span title="站点总字数">99k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:25</span>
+    <span title="站点阅读时长">1:30</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

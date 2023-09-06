@@ -3,13 +3,25 @@
     <id>http://example.com</id>
     <title>zhuZhu • Posts by &#34;笔记&#34; category</title>
     <link href="http://example.com" />
-    <updated>2023-08-22T04:33:52.000Z</updated>
+    <updated>2023-09-06T01:30:10.000Z</updated>
     <category term="js" />
+    <category term="vue3" />
     <category term="TS," />
     <category term="egg.js" />
-    <category term="vue3" />
     <category term="nuxt" />
     <category term="测试" />
+    <entry>
+        <id>http://example.com/2023/09/06/instanceof%E5%AE%9E%E7%8E%B0/</id>
+        <title>instanceof实现</title>
+        <link rel="alternate" href="http://example.com/2023/09/06/instanceof%E5%AE%9E%E7%8E%B0/"/>
+        <content type="html">&lt;h1 id=&#34;instanceof实现原理&#34;&gt;&lt;a href=&#34;#instanceof实现原理&#34; class=&#34;headerlink&#34; title=&#34;instanceof实现原理&#34;&gt;&lt;/a&gt;instanceof实现原理&lt;/h1&gt;&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//  instanceof 实现&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//  [] instanceof Array&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;function myInstanceof (left, right) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  let proto = Object.getPrototypeOf(left) // 获取__proto__&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  let protoType = right.prototype&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  // 循环判断 &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  while (1) &amp;#123; // 在原型链上寻找&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    if (!proto) return false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    if (proto == protoType) return true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proto = Object.getPrototypeOf(proto)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;console.log(myInstanceof(1, Array));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+</content>
+        <category term="js" />
+        <updated>2023-09-06T01:30:10.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2023/08/22/TypeScript/</id>
         <title>TypeScript</title>
